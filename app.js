@@ -1,1 +1,4 @@
-console.log('I am in a separate file')
+document.getElementById('case-pluse')
+    .addEventListener('click', function () {
+        console.log("bismillah");
+    })
