@@ -10,7 +10,11 @@ function calculateTotal() {
     const phoneNumber = getInputValue('phone') * 1219;
     const caseNumber = getInputValue('case') * 59;
     const subTotal = phoneNumber + caseNumber;
+    const taxAmount = subTotal / 10;
+    const totalPrice = subTotal + taxAmount;
     document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = taxAmount;
+    document.getElementById('total-price').innerText = totalPrice;
 }
 
 function updateNumber(product, price, isIncrease) {
