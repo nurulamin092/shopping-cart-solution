@@ -2,15 +2,17 @@
 function updateInputNumber(isIncreasing) {
     const caseInputNumber = document.getElementById('case-number');
     const caseInputNumberText = caseInputNumber.value;
-    const inputNumber = parseInt(caseInputNumberText);
+    let inputNumber = parseInt(caseInputNumberText);
     if (isIncreasing == true) {
-        caseInputNumber.value = inputNumber + 1;
+        inputNumber = inputNumber + 1;
     }
 
     else if (inputNumber > 0) {
-        caseInputNumber.value = inputNumber - 1;
+        inputNumber = inputNumber - 1;
     }
-
+    caseInputNumber.value = inputNumber;
+    const caseTotal = document.getElementById('case-total');
+    caseTotal.innerText = inputNumber * 59;
 }
 
 
